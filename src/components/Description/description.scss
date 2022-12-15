@@ -1,0 +1,78 @@
+@use '../../../sass/variables';
+
+.description {
+  flex: 1;
+  padding-top: 3rem;
+  text-align: left;
+}
+
+.description__title {
+  color: variables.$clr-primary-orange;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding-bottom: 1rem;
+}
+
+.description__heading {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding-bottom: 1.5rem;
+}
+
+.description__item-description {
+  color: variables.$clr-neutral-gray-blue;
+  line-height: 1.5;
+}
+
+.description__pricing-discounted {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 0;
+  align-items: center;
+  span {
+    color: variables.$clr-primary-orange;
+    font-size: 0.9rem;
+    background-color: variables.$clr-primary-pale-orange;
+    padding: 2px;
+  }
+}
+
+.description__pricing-original {
+  color: variables.$clr-neutral-gray-blue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: line-through;
+  padding-bottom: 2rem;
+}
+
+.description__add-items {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.add {
+  flex: 0.5;
+  width: 100%;
+  
+  button {
+    width: 33%;  // 100% fo the width divide by 3 buttons
+    height: 100%;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+.add-to-cart {
+  flex: 0.7;
+  width: 100%;
+}
+
+.description__subtract-button,
+.description__add-button {
+  color: variables.$clr-primary-orange;
+}

@@ -1,0 +1,33 @@
+@use '../../../sass/variables';
+
+.popup {
+  width: 280px;
+  height: 200px;
+  background-color: variables.$clr-white;
+  box-shadow: 5px 5px 12px 5px #d1caca;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  // visibility: hidden;
+}
+
+.popup__top {
+  border-bottom: 2px solid #eee;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  padding-bottom: 0.5rem;
+  p {
+    padding: 10px;
+  }
+}
+
+.popup__details {
+  text-align: center;
+  margin: auto;
+  color: variables.$clr-neutral-gray-blue;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
