@@ -1,4 +1,4 @@
-const imagesList = [
+const Data = [
   {
     img: '/images/image-product-1.jpg',
     thumbnail: '/images/image-product-1-thumbnail.jpg',
@@ -15,4 +15,6 @@ const imagesList = [
     img: '/images/image-product-4.jpg',
     thumbnail: '/images/image-product-4-thumbnail.jpg',
   }
-]
+];
+
+export default Data;
