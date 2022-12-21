@@ -9,16 +9,21 @@ import thumbnail3 from '/images/image-product-3-thumbnail.jpg';
 import thumbnail4 from '/images/image-product-4-thumbnail.jpg';
 
 const PhotoDisplay = () => {
+
+  const toggleImg = () => {
+    alert("Toggling");
+  }
+
   return (
     <div className='photo-display'>
       <div className="photo-display__main-img">
         <img src={img1} alt="" />
       </div>
       <div className="photo-display__small-img">
-        <img src={thumbnail1} className='photo-display__thumbnail-img active' alt="image-thumbnail" />
-        <img src={thumbnail2} className='photo-display__thumbnail-img' alt="image-thumbnail" />
-        <img src={thumbnail3} className='photo-display__thumbnail-img' alt="image-thumbnail" />
-        <img src={thumbnail4} className='photo-display__thumbnail-img' alt="image-thumbnail" />
+        <img src={thumbnail1} className='photo-display__thumbnail-img active' alt="image-thumbnail" onClick={toggleImg} />
+        <img src={thumbnail2} className='photo-display__thumbnail-img' alt="image-thumbnail" onClick={toggleImg} />
+        <img src={thumbnail3} className='photo-display__thumbnail-img' alt="image-thumbnail" onClick={toggleImg} />
+        <img src={thumbnail4} className='photo-display__thumbnail-img' alt="image-thumbnail" onClick={toggleImg} />
       </div>
     </div>
   )
