@@ -1,3 +1,5 @@
+@use '../../../sass/variables';
+
 .photo-display {
   flex: 1;
 }
@@ -28,4 +30,14 @@
   // width: calc(100% / 1 - 50px);
   height: 80px;
   border-radius: 5px;
+}
+
+.active {
+  border: 2px solid variables.$clr-primary-orange;
+  opacity: 0.5;
+}
+
+.photo-display__thumbnail-img:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
