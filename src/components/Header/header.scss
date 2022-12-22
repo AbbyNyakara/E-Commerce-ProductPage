@@ -33,3 +33,9 @@
 .avatar:hover {
   outline: 2px solid variables.$clr-primary-orange;
 }
+
+.header__links > p:hover {
+  border-bottom: 2px solid variables.$clr-primary-orange;
+  color: variables.$clr-neutral-very-dark-blue;
+  // margin-bottom: 0.8rem;
+}
