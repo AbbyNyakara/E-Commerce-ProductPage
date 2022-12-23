@@ -1,7 +1,8 @@
-import React from 'react';
+import { useState } from 'react';
 import './popup.scss';
 
 const Popup = () => {
+
   return (
     <div className='popup'>
       <div className="popup__top">

@@ -17,10 +17,21 @@ export const itemsSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1
+      state.value += 1;
+      state.cart += 1;
     },
+    // The decrement should not go below zero
     decrement: (state) => {
-      state.value -= 1
+      if(state.value === 0) {
+        state.value = 0;
+        state.cart = 0;
+      } else {
+        state.value -= 1;
+        state.cart -= 1;
+      }
+    },
+    addtoCart: (state) => {
+
     }
   }
 })

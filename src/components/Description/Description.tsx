@@ -8,25 +8,12 @@ import './description.scss'
 
 const Description = () => {
 
-  const [count, setCount] = useState(0)
+  // Read the state.
+  // const value = useSelector((state: any) => state.shopping.value)
+  const {value} = useSelector((state: any) => state.shopping);
 
-  const removeItem = (e: React.FormEvent) => {
-    setCount(count - 1)
-  }
-
-  const addItem = (e: React.FormEvent) => {
-    setCount(count + 1)
-  }
-
-  // const dispatch = useDispatch();
-
-  // // gets the current state of the shopping items
-  // const removeItem = (store.getState().shopping) => {
-  //   useDispatch(decrement)
-  // } 
-
-
-
+  // The dispatch is what will dispatch the action
+  const dispatch = useDispatch()
 
   return (
     <div className='description'>
@@ -44,9 +31,9 @@ const Description = () => {
       <div className="description__add-items">
         {/* Add the actions */}
         <div className="add">
-          <button className='description__subtract-button' onClick={removeItem}>-</button>
-          <button className='description__number-added'>{count}</button>
-          <button className='description__add-buttondescription__add-button' onClick={addItem}>+</button>
+          <button className='description__subtract-button' onClick={() => dispatch(decrement())}>-</button>
+          <button className='description__number-added'>{value}</button>
+          <button className='description__add-buttondescription__add-button' onClick={() => dispatch(increment())}>+</button>
         </div>
         
         <StyledButton className='add-to-cart'>
