@@ -5,11 +5,13 @@ import { createSlice } from '@reduxjs/toolkit';
 export interface CounterState {
   value: number
   cart: number
+  displayCart: boolean
 }
 
 export const initialState: CounterState = {
   value: 0,
-  cart: 0
+  cart: 0,
+  displayCart: false
 }
 
 export const itemsSlice = createSlice({
@@ -30,8 +32,8 @@ export const itemsSlice = createSlice({
         state.cart -= 1;
       }
     },
-    addtoCart: (state) => {
-
+    toggleCart: (state) => {
+      state.displayCart = !state.displayCart
     }
   }
 })

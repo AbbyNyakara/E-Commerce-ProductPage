@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './popup.scss';
 
 const Popup = () => {

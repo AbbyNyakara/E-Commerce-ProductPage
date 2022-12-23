@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import './header.scss';
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Avatar } from '../../styled_components/Avatar';
+import { useDispatch, useSelector } from 'react-redux';
+import itemsReducer from '../../features/itemsSlice';
 
 const Header = () => {
 
-  const [cart, setCart] = useState(false);
+  // const [cart, setCart] = useState(false);
 
   const toggleCart = () => {
-    setCart(!cart)
+    // dispatch an action
+    alert("added to cart")
   }
 
   return (
