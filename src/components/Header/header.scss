@@ -26,8 +26,12 @@
   font-weight: 700;
 }
 
+.avatar {
+  margin-left: 2rem;
+}
+
 .cart {
-  padding-right: 2rem;
+  position: relative;
 }
 
 .avatar:hover {
@@ -37,4 +41,15 @@
 .header__links > p:hover {
   border-bottom: 2px solid variables.$clr-primary-orange;
   color: variables.$clr-neutral-very-dark-blue;
+}
+
+// The number that displays above the cart??
+.cart__number {
+  position: absolute;
+  color: variables.$clr-white;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: variables.$clr-primary-orange;
+  font-size: 0.8rem;
 }

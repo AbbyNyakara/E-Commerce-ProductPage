@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import './header.scss';
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Avatar } from '../../styled_components/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
-import itemsReducer from '../../features/itemsSlice';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 
-  // const [cart, setCart] = useState(false);
+  const { addCart } = useSelector((state: any) => state.shopping)
 
   const toggleCart = () => {
     // dispatch an action
-    alert("added to cart")
+    alert("reveal cart")
   }
 
   return (
@@ -30,8 +29,10 @@ const Header = () => {
       </div>
       
       <div className="header__profile">
-        {/* <AiOutlineShoppingCart /> */}
         <img src="/images/icon-cart.svg" alt="" className='cart' onClick={toggleCart}/>
+        {
+          addCart ? <small className='cart__number'>{addCart}</small> : ""
+        }
         <Avatar src='images/image-avatar.png' className='avatar' />
       </div>
     </div>

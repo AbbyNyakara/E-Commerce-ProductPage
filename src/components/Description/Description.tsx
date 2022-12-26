@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StyledButton } from '../../styled_components/Button';
 import { store } from '../../features/store';
-import itemsReducer, { increment, decrement } from '../../features/itemsSlice';
+import { increment, decrement, addCart } from '../../features/itemsSlice';
 import './description.scss'
 
 
@@ -14,6 +14,11 @@ const Description = () => {
 
   // The dispatch is what will dispatch the action
   const dispatch = useDispatch()
+
+  // Add to Cart
+  const addToCart = () => {
+    dispatch(addCart())
+  }
 
   return (
     <div className='description'>
@@ -36,7 +41,7 @@ const Description = () => {
           <button className='description__add-buttondescription__add-button' onClick={() => dispatch(increment())}>+</button>
         </div>
         
-        <StyledButton className='add-to-cart'>
+        <StyledButton className='add-to-cart' onClick={addToCart}>
           <img src="/images/icon-cart.svg" alt="" />
           Add to cart
         </StyledButton>
