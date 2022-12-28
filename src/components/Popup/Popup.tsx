@@ -5,11 +5,8 @@ import thumbnail1 from '/images/image-product-1-thumbnail.jpg';
 import { StyledButton } from '../../styled_components/Button';
 
 const Popup = () => {
-
   const dispatch = useDispatch();
-
   const cartItems = useSelector((state: any) => state.shopping.addCart);
-  // const empty = useSelector((state: any) => state.shopping.emptyCart)
   const view = useSelector((state: any) => state.shopping.displayCart)
 
   let total = 125 * cartItems
@@ -44,4 +41,4 @@ const Popup = () => {
   )
 }
 
-export default Popup
+export default Popup;
