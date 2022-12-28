@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StyledButton } from '../../styled_components/Button';
-import { store } from '../../features/store';
 import { increment, decrement, addCart } from '../../features/itemsSlice';
 import './description.scss'
 
@@ -12,10 +10,8 @@ const Description = () => {
   // const value = useSelector((state: any) => state.shopping.value)
   const {value} = useSelector((state: any) => state.shopping);
 
-  // The dispatch is what will dispatch the action
   const dispatch = useDispatch()
 
-  // Add to Cart
   const addToCart = () => {
     dispatch(addCart())
   }

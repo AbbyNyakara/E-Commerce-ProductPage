@@ -6,7 +6,6 @@ export interface CounterState {
   cart: number
   displayCart: boolean
   addCart: number
-  emptyCart: number
 }
 
 export const initialState: CounterState = {
@@ -14,7 +13,6 @@ export const initialState: CounterState = {
   cart: 0,
   displayCart: false,
   addCart: 0,
-  emptyCart: 0
 }
 
 export const itemsSlice = createSlice({
@@ -42,7 +40,8 @@ export const itemsSlice = createSlice({
       state.addCart = state.value
     },
     emptyCart: (state) => {
-      state.emptyCart = 0;
+      state.addCart = 0;
+      state.value = 0;
     }
   }
 })

@@ -30,7 +30,7 @@
   text-align: center;
   margin: auto;
   color: variables.$clr-neutral-gray-blue;
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 0.9rem;
   font-weight: bolder;
 }
@@ -44,7 +44,32 @@
 
 .popup__top {
   display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  text-align: left;
+  height: 50px;
   p {
     font-weight: normal;
+    padding: 0;
   }
+  span {
+    color: variables.$clr-neutral-dark-gray-blue;
+    font-weight: bolder;
+  }
+}
+
+.checkout__btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.delete__icon {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.items__purchased {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
 }
