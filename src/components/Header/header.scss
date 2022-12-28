@@ -53,3 +53,21 @@
   background-color: variables.$clr-primary-orange;
   font-size: 0.8rem;
 }
+
+.navbar__desktop {
+  display: none;
+}
+
+@media only screen and (max-width: 749px) {
+  .navbar__desktop {
+    display: flex;
+  }
+
+  .header__links {
+    display: none;
+  }
+
+  .header__left {
+    flex-direction: row-reverse;
+  }
+}

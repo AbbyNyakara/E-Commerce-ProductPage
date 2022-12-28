@@ -5,9 +5,7 @@ import { toggleCart} from '../../features/itemsSlice';
 import { useDispatch } from 'react-redux';
 
 const Header = () => {
-
-  const { addCart } = useSelector((state: any) => state.shopping)
-
+  const { addCart } = useSelector((state: any) => state.shopping);
   const dispatch = useDispatch();
 
   return (
@@ -22,6 +20,9 @@ const Header = () => {
           <p>Women</p>
           <p>About</p>
           <p>Contact</p>
+        </div>
+        <div className="navbar__desktop">
+          <img src="/images/icon-menu.svg" alt="" />
         </div>
       </div>
       

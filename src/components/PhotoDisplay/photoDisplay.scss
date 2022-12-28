@@ -5,7 +5,7 @@
 }
 
 .photo-display__main-img {
-  width: 90%;
+  width: 100%;
   height: 400px;
   
   img {
@@ -20,12 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  gap: 25px;
+  width: 100%;
+  gap: 20px;
   padding-top: 1rem;
   img {
-    width: 80px;
-  // width: calc(100% / 1 - 50px);
+    // width: 80px;
+    width: calc(100% / 4);
     height: 80px;
     border-radius: 5px;
   }
@@ -37,7 +37,9 @@
   // opacity to be black but with 75% opacity
 }
 
-.photo-display__thumbnail-img:hover {
-  opacity: 0.5;
-  cursor: pointer;
+.photo-display__thumbnail-img{
+  img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
 }

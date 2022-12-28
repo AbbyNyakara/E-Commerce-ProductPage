@@ -1,5 +1,4 @@
-import React from 'react'
-import './App.scss'
+import './App.scss';
 import Header from './components/Header/Header';
 import Description from './components/Description/Description';
 import PhotoDisplay from './components/PhotoDisplay/PhotoDisplay';
@@ -18,4 +17,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
