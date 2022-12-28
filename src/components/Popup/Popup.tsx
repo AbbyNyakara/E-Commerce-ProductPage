@@ -10,11 +10,12 @@ const Popup = () => {
 
   const cartItems = useSelector((state: any) => state.shopping.addCart);
   // const empty = useSelector((state: any) => state.shopping.emptyCart)
+  const view = useSelector((state: any) => state.shopping.displayCart)
 
   let total = 125 * cartItems
 
   return (
-    <div className='popup'>
+    <div className={view ?  "popup" : "popup hide"}>
       <div className="popup__top">
         <p>Cart</p>
       </div>
