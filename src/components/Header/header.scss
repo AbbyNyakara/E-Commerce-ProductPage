@@ -58,6 +58,14 @@
   display: none;
 }
 
+.close__menu {
+  display: none;
+}
+
+.header .header__left #showMenu {
+  display: flex;
+}
+
 @media only screen and (max-width: 749px) {
   .navbar__desktop {
     display: flex;
@@ -70,4 +78,32 @@
   .header__left {
     flex-direction: row-reverse;
   }
+
+  .close__menu {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  .header .header__left #showMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    top: 0;
+    left: 20px;
+    padding-left: 50px;
+    height: 100vh;
+    width: 50%;
+    padding-top: 20px;
+    background-color: variables.$clr-white;
+    color: variables.$clr-neutral-very-dark-blue;
+    .close__menu {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 30px;
+    }
+  }
 }
+
+// How to add the transparent black background to the body when menu is open

@@ -34,7 +34,7 @@ const Description = () => {
         <div className="add">
           <button className='description__subtract-button' onClick={() => dispatch(decrement())}>-</button>
           <button className='description__number-added'>{value}</button>
-          <button className='description__add-buttondescription__add-button' onClick={() => dispatch(increment())}>+</button>
+          <button className='description__add-button' onClick={() => dispatch(increment())}>+</button>
         </div>
         
         <StyledButton className='add-to-cart' onClick={addToCart}>

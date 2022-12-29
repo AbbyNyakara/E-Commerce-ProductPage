@@ -76,3 +76,15 @@
 .description__add-button {
   color: variables.$clr-primary-orange;
 }
+
+@media only screen and (max-width: 749px) {
+  .description__add-items {
+    flex-direction: column;
+  }
+
+  .description__subtract-button,
+  .description__add-button,
+  .description__number-added {
+    padding: 10px;
+  }
+}

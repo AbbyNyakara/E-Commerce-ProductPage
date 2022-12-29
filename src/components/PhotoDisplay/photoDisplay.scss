@@ -43,3 +43,11 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 749px) {
+  .photo-display__thumbnail-img {
+    img {
+      display: none;
+    }
+  }
+}
