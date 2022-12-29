@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StyledButton } from '../../styled_components/Button';
-import { store } from '../../features/store';
 import { increment, decrement, addCart } from '../../features/itemsSlice';
 import './description.scss'
 
@@ -12,10 +10,8 @@ const Description = () => {
   // const value = useSelector((state: any) => state.shopping.value)
   const {value} = useSelector((state: any) => state.shopping);
 
-  // The dispatch is what will dispatch the action
   const dispatch = useDispatch()
 
-  // Add to Cart
   const addToCart = () => {
     dispatch(addCart())
   }
@@ -38,7 +34,7 @@ const Description = () => {
         <div className="add">
           <button className='description__subtract-button' onClick={() => dispatch(decrement())}>-</button>
           <button className='description__number-added'>{value}</button>
-          <button className='description__add-buttondescription__add-button' onClick={() => dispatch(increment())}>+</button>
+          <button className='description__add-button' onClick={() => dispatch(increment())}>+</button>
         </div>
         
         <StyledButton className='add-to-cart' onClick={addToCart}>

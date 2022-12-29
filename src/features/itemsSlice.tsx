@@ -6,7 +6,7 @@ export interface CounterState {
   cart: number
   displayCart: boolean
   addCart: number
-  emptyCart: number
+  menu: boolean
 }
 
 export const initialState: CounterState = {
@@ -14,7 +14,7 @@ export const initialState: CounterState = {
   cart: 0,
   displayCart: false,
   addCart: 0,
-  emptyCart: 0
+  menu: false
 }
 
 export const itemsSlice = createSlice({
@@ -25,7 +25,6 @@ export const itemsSlice = createSlice({
       state.value += 1;
       state.cart += 1;
     },
-    // The decrement should not go below zero
     decrement: (state) => {
       if(state.value === 0) {
         state.value = 0;
@@ -42,10 +41,14 @@ export const itemsSlice = createSlice({
       state.addCart = state.value
     },
     emptyCart: (state) => {
-      state.emptyCart = 0;
+      state.addCart = 0;
+      state.value = 0;
+    },
+    toggleMenu: (state) => {
+      state.menu = !state.menu
     }
   }
 })
 
 export default itemsSlice.reducer;
-export const { increment, decrement, toggleCart, addCart, emptyCart } = itemsSlice.actions;
+export const { increment, decrement, toggleCart, addCart, emptyCart, toggleMenu } = itemsSlice.actions;

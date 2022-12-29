@@ -14,11 +14,8 @@ const PhotoDisplay = () => {
   const [ active, setActive ] = useState(false)
 
   const toggleImg = (mainImg: any) => {
-    // alert(mainImg);
     setImage(mainImg)
     setActive(!active)
-    // when it changes to true, add the active class to the thumbnail image
-    // {active ? "active" : ""}
   }
 
   return (
@@ -27,10 +24,10 @@ const PhotoDisplay = () => {
         <img src={image} alt="" />
       </div>
       <div className="photo-display__small-img">
-        <img src={thumbnail1} className={active ? "active" : ""} alt="image-thumbnail" onClick={() => toggleImg(img1)} /> 
-        <img src={thumbnail2} className={active ? "active" : ""} alt="image-thumbnail" onClick={() => toggleImg(img2)} />
-        <img src={thumbnail3} className={active ? "active" : ""} alt="image-thumbnail" onClick={() => toggleImg(img3)} />
-        <img src={thumbnail4} className={active ? "active" : ""} alt="image-thumbnail" onClick={() => toggleImg(img4)} />
+        <img src={thumbnail1} alt="image-thumbnail" onClick={() => toggleImg(img1)} /> 
+        <img src={thumbnail2} alt="image-thumbnail" onClick={() => toggleImg(img2)} />
+        <img src={thumbnail3} alt="image-thumbnail" onClick={() => toggleImg(img3)} />
+        <img src={thumbnail4} alt="image-thumbnail" onClick={() => toggleImg(img4)} />
       </div>
     </div>
   )
