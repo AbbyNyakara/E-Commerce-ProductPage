@@ -14,11 +14,8 @@ const PhotoDisplay = () => {
   const [ active, setActive ] = useState(false)
 
   const toggleImg = (mainImg: any) => {
-    // alert(mainImg);
     setImage(mainImg)
     setActive(!active)
-    // when it changes to true, add the active class to the thumbnail image
-    // {active ? "active" : ""}
   }
 
   return (

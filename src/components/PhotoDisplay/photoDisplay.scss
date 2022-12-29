@@ -45,9 +45,22 @@
 }
 
 @media only screen and (max-width: 749px) {
-  .photo-display__thumbnail-img {
+  .photo-display__small-img {
+    display: none;
+  }
+
+  .photo-display__main-img {
+    width: 100%;
+    height: 300px;
     img {
-      display: none;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
     }
+  }
+
+  .photo-display {
+    width: 100%;
   }
 }
