@@ -8,6 +8,7 @@ import thumbnail1 from '/images/image-product-1-thumbnail.jpg';
 import thumbnail2 from '/images/image-product-2-thumbnail.jpg';
 import thumbnail3 from '/images/image-product-3-thumbnail.jpg';
 import thumbnail4 from '/images/image-product-4-thumbnail.jpg';
+import './photos.js';
 
 const PhotoDisplay = () => {
   const [ image, setImage ] = useState(img1);
@@ -21,9 +22,9 @@ const PhotoDisplay = () => {
   return (
     <div className='photo-display'>
       <div className="photo-display__main-img">
-        <img src="/images/icon-previous.svg" alt="" className='previous__icon'/>
+        {/* <img src="/images/icon-previous.svg" alt="" className='previous__icon'/> */}
         <img src={image} alt="" />
-        <img src="/images/icon-next.svg" alt="" className='icon-next' />
+        {/* <img src="/images/icon-next.svg" alt="" className='icon-next' /> */}
       </div>
       <div className="photo-display__small-img">
         <img src={thumbnail1} alt="image-thumbnail" onClick={() => toggleImg(img1)} /> 

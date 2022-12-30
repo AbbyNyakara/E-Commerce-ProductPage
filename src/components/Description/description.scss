@@ -77,6 +77,10 @@
   color: variables.$clr-primary-orange;
 }
 
+.add__cart {
+  padding-right: 20px;
+}
+
 @media only screen and (max-width: 749px) {
   .description__add-items {
     flex-direction: column;
