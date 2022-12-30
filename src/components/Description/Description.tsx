@@ -38,7 +38,7 @@ const Description = () => {
         </div>
         
         <StyledButton className='add-to-cart' onClick={addToCart}>
-          <img src="/images/icon-cart.svg" alt="" />
+          <img src="/images/icon-cart.svg" alt="" className='add__cart' />
           Add to cart
         </StyledButton>
       </div>
