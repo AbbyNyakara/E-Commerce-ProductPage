@@ -44,13 +44,18 @@
   }
 }
 
+.previous__icon,
+.icon-next {
+  display: none;
+}
+
 @media only screen and (max-width: 749px) {
   .photo-display__small-img {
     display: none;
   }
 
   .photo-display__main-img {
-    width: 100%;
+    width: 100vw;
     height: 300px;
     img {
       width: 100%;
@@ -62,5 +67,27 @@
 
   .photo-display {
     width: 100%;
+  }
+
+  .previous__icon {
+    position: absolute;
+    display: flex;
+    max-width: 20px;
+    max-height: 20px;
+    top: 200px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .icon-next {
+    position: absolute;
+    display: flex;
+    max-width: 20px;
+    max-height: 20px;
+    top: 200px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
   }
 }

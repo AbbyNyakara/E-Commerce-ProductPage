@@ -21,7 +21,9 @@ const PhotoDisplay = () => {
   return (
     <div className='photo-display'>
       <div className="photo-display__main-img">
+        <img src="/images/icon-previous.svg" alt="" className='previous__icon'/>
         <img src={image} alt="" />
+        <img src="/images/icon-next.svg" alt="" className='icon-next' />
       </div>
       <div className="photo-display__small-img">
         <img src={thumbnail1} alt="image-thumbnail" onClick={() => toggleImg(img1)} /> 
